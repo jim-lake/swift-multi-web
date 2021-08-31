@@ -10,11 +10,14 @@
     "type": "git",
     "url": "git@github.com:jim-lake/swift-multi-web.git"
   },
-  "main": "./src/index.js",
+  "main": "dist/swift-multi-web.min.js",
+  "module": "dist/swift-multi-web.min.js",
+  "browser": "dist/swift-multi-web.min.js",
   "files": [
-    "src/**/*"
+    "dist"
   ],
   "scripts": {
+    "build": "rollup -c",
     "lint": "eslint src/**.js",
     "pretty": "prettier --write src/**.js"
   },
@@ -22,5 +25,11 @@
     "async": "3.2.0",
     "crypto-js": "4.1.1",
     "path": "0.12.7"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.56.3",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
