@@ -1,0 +1,26 @@
+{
+  "name": "swift-multi-web",
+  "version": "0.0.1",
+  "description": "Multi stream upload to openstack swift store",
+  "author": {
+    "name": "Jim Lake"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jim-lake/swift-multi-web.git"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src/**/*"
+  ],
+  "scripts": {
+    "lint": "eslint src/**.js",
+    "pretty": "prettier --write src/**.js"
+  },
+  "dependencies": {
+    "async": "3.2.0",
+    "crypto-js": "4.1.1",
+    "path": "0.12.7"
+  }
+}
