@@ -14,8 +14,8 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      nodeResolve({ preferBuiltins: false, browser: true }),
       commonjs(),
-      nodeResolve({ preferBuiltins: false }),
       terser({ format: { comments: false } }),
     ],
   },
